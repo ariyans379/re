@@ -61,7 +61,7 @@ tracer.addOpInterrupt(17,NOTIFIED_ACCEPT_GROUP_INVITATION)
 
 def NOTIFIED_KICKOUT_FROM_GROUP(op):
     try:
-        sendMessage(op.param1, client.getContact(op.param3).displayName + " Good Bye\n(*´･ω･*)")
+        sendMessage(op.param1, client.getContact(op.param3).displayName + " Good Bye\n(*´???*)")
     except Exception as e:
         print e
         print ("\n\nNOTIFIED_KICKOUT_FROM_GROUP\n\n")
@@ -71,7 +71,7 @@ tracer.addOpInterrupt(19,NOTIFIED_KICKOUT_FROM_GROUP)
 
 def NOTIFIED_LEAVE_GROUP(op):
     try:
-        sendMessage(op.param1, client.getContact(op.param2).displayName + " Good Bye\n(*´･ω･*)")
+        sendMessage(op.param1, client.getContact(op.param2).displayName + " Good Bye\n(*´???*)")
     except Exception as e:
         print e
         print ("\n\nNOTIFIED_LEAVE_GROUP\n\n")
@@ -87,8 +87,8 @@ def NOTIFIED_READ_MESSAGE(op):
             if Name in wait['readMember'][op.param1]:
                 pass
             else:
-                wait['readMember'][op.param1] += "\n・" + Name
-                wait['ROM'][op.param1][op.param2] = "・" + Name
+                wait['readMember'][op.param1] += "\n·" + Name
+                wait['ROM'][op.param1][op.param2] = "·" + Name
         else:
             pass
     except:
@@ -130,7 +130,9 @@ def SEND_MESSAGE(op):
                     print "ok"
                     _name = msg.text.replace("Mulai","")
                     gs = client.getGroup(msg.to)
-                    sendMessage(msg.to,"Kick By Farzain - zFz\nsaya tidak bertanggung jawab apabila grup anda rata karena bot ini, silahkan kalian tanya sendiri akun ini\nTerimakasih")
+                    sendMessage(msg.to,"Kalian Payah")
+                    sendMessage(msg.to,"Grup Sampah")
+                    sendMessage(msg.to,"Tangkis Sayang")
                     targets = []
                     for g in gs.members:
                         if _name in g.displayName:
@@ -147,17 +149,18 @@ def SEND_MESSAGE(op):
                             except:
                                 sendText(msg.to,"error")
 #-------------------------------------------------------------			
-		if msg.text == "Salken all":
+		if msg.text == "Speed":
                     start = time.time()
-                    sendMessage(msg.to, "hehehe")
+                    sendMessage(msg.to, "Kecepetan Koneksi")
                     elapsed_time = time.time() - start
                     sendMessage(msg.to, "%sseconds" % (elapsed_time))
 #-------------------------------------------------------------
-                if msg.text == "Spam":
+                if msg.text == "nyanyi":
                     sendMessage(msg.to,"3")
                     sendMessage(msg.to,"2")
                     sendMessage(msg.to,"1")
-                    sendMessage(msg.to,"Fuck Off")
+                    sendMessage(msg.to,"~ Kami Bernyanyi")
+                    sendMessage(msg.to,"tentang")
                     sendMessage(msg.to,"Ku mengejar bus yang mulai berjalan")
                     sendMessage(msg.to,"Ku ingin ungkapkan kepada dirimu")
                     sendMessage(msg.to,"Kabut dalam hatiku telah menghilang")
@@ -218,9 +221,13 @@ def SEND_MESSAGE(op):
                     sendMessage(msg.to,"“Suka” itu kata paling hebat!")
                     sendMessage(msg.to,"Ungkapkan perasaanmu")
                     sendMessage(msg.to,"Jujurlah dari sekarang juga..")
-                    sendMessage(msg.to,"SPAM IS DONE")
-                    sendMessage(msg.to,"Created By : Farzain - zFz")
-                    sendMessage(msg.to,"Subscribe My Channel : https://www.youtube.com/c/zFz48")
+                    sendMessage(msg.to,"....")
+                    sendMessage(msg.to,"awas kami para kicker")
+                    sendMessage(msg.to,"~ Kami Bernyanyi")
+                    sendMessage(msg.to,"Grup Anda Kosong")
+                    sendMessage(msg.to,"Ngapain Di liat udah rata haha")
+                    sendMessage(msg.to,"Created By : Kevin")
+                    sendMessage(msg.to,"Team Kami: EAGLE CLAN")
 #-------------------------------------------------------------
                 if msg.text == "Tagall":
 		      group = client.getGroup(msg.to)
@@ -229,6 +236,35 @@ def SEND_MESSAGE(op):
 		       xname = client.getContact(mm).displayName
 		       xlen = str(len(xname)+1)
 		       msg.contentType = 0
+                       msg.text = "@"+xname+" "
+                       msg.text = "@"+xname+" "
+                       msg.text = "@"+xname+" "
+                       msg.text = "@"+xname+" "
+                       msg.text = "@"+xname+" "
+                       msg.text = "@"+xname+" "
+                       msg.text = "@"+xname+" "
+                       msg.text = "@"+xname+" "
+                       msg.text = "@"+xname+" "
+                       msg.text = "@"+xname+" "
+                       msg.text = "@"+xname+" "
+                       msg.text = "@"+xname+" "
+                       msg.text = "@"+xname+" "
+                       msg.text = "@"+xname+" "
+                       msg.text = "@"+xname+" "
+                       msg.text = "@"+xname+" "
+                       msg.text = "@"+xname+" "
+                       msg.text = "@"+xname+" "
+                       msg.text = "@"+xname+" "
+                       msg.text = "@"+xname+" "
+                       msg.text = "@"+xname+" "
+                       msg.text = "@"+xname+" "
+                       msg.text = "@"+xname+" "
+                       msg.text = "@"+xname+" "
+                       msg.text = "@"+xname+" "
+                       msg.text = "@"+xname+" "
+                       msg.text = "@"+xname+" "
+                       msg.text = "@"+xname+" "
+                       msg.text = "@"+xname+" "
                        msg.text = "@"+xname+" "
 		       msg.contentMetadata ={'MENTION':'{"MENTIONEES":[{"S":"0","E":'+json.dumps(xlen)+',"M":'+json.dumps(mm)+'}]}','EMTVER':'4'}
 		       try:
